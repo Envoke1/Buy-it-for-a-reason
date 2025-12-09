@@ -1,0 +1,83 @@
+/* --- style.css --- BUYING FOR A REASON --- */
+:root {
+    --black: #111;
+    --white: #fff;
+    --gray: #f4f4f4;
+    --accent: #e63946; /* Red accent for 'Reason' */
+    --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --anim-speed: 0.4s;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font); color: var(--black); background: var(--white); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- Animations --- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate { animation: fadeUp var(--anim-speed) ease-out forwards; }
+
+/* --- Header --- */
+header { border-bottom: 1px solid #eee; padding: 20px 0; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 100; backdrop-filter: blur(5px); }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; }
+.logo span { color: var(--accent); }
+.nav-links a { margin-left: 25px; font-weight: 600; font-size: 14px; text-transform: uppercase; }
+.cart-count { background: var(--black); color: var(--white); padding: 2px 6px; border-radius: 50%; font-size: 10px; vertical-align: top; }
+
+/* --- Hero --- */
+.hero { background: var(--gray); padding: 100px 20px; text-align: center; margin-bottom: 50px; }
+.hero h1 { font-size: 56px; margin-bottom: 20px; line-height: 1; }
+.btn { background: var(--black); color: var(--white); padding: 15px 35px; border: none; font-weight: 700; text-transform: uppercase; display: inline-block; transition: transform 0.2s; }
+.btn:hover { transform: scale(1.05); }
+
+/* --- Filters (Shop Page) --- */
+.filter-bar { margin-bottom: 30px; display: flex; gap: 15px; justify-content: center; }
+.filter-btn { padding: 10px 20px; border: 1px solid #ddd; background: transparent; border-radius: 30px; font-size: 13px; font-weight: 600; }
+.filter-btn.active, .filter-btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+
+/* --- Product Grid --- */
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; }
+.product-card { cursor: pointer; }
+.product-card:hover img { transform: scale(1.03); }
+.img-wrap { overflow: hidden; background: var(--gray); margin-bottom: 15px; height: 320px; display: flex; align-items: center; justify-content: center; }
+.img-wrap img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
+.p-info h4 { font-size: 15px; margin-bottom: 5px; }
+.p-info p { color: #666; font-size: 14px; }
+.p-info .price { font-weight: 700; color: var(--black); margin-top: 5px; display: block; }
+
+/* --- Product Detail Page --- */
+.pdp-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; margin-top: 40px; }
+.pdp-img { background: var(--gray); height: 600px; width: 100%; object-fit: cover; }
+
+/* --- Cart Page --- */
+.cart-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; margin-top: 40px; }
+.cart-item { display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; align-items: center; }
+.cart-item img { width: 100px; height: 100px; object-fit: cover; }
+.remove-btn { color: var(--accent); font-size: 12px; text-decoration: underline; background: none; border: none; padding: 0; margin-top: 5px; }
+
+.summary { background: var(--gray); padding: 30px; border-radius: 5px; height: fit-content; }
+.sum-row { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 14px; }
+.total { font-weight: 900; font-size: 18px; border-top: 1px solid #ccc; padding-top: 15px; }
+
+/* --- Checkout & Thank You --- */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 5px; }
+.form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; }
+.thank-you-box { text-align: center; max-width: 500px; margin: 100px auto; }
+.check-icon { font-size: 60px; color: green; margin-bottom: 20px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pdp-grid, .cart-grid, .nav-links { display: block; }
+    .nav-links { display: none; } /* Simplified mobile nav */
+    .pdp-img { height: 400px; margin-bottom: 20px; }
+}
