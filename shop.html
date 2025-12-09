@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Buying for a Reason</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buying<span>.</span></a>
+            <a href="cart.html">Bag <span id="cart-count" class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 40px;">
+        <h1 style="text-align: center; margin-bottom: 20px;">The Collection</h1>
+        
+        <div class="filter-bar animate">
+            <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+            <button class="filter-btn" onclick="filterProducts('shoes')">Shoes</button>
+            <button class="filter-btn" onclick="filterProducts('bags')">Bags</button>
+            <button class="filter-btn" onclick="filterProducts('watches')">Watches</button>
+        </div>
+
+        <div id="product-grid" class="product-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
