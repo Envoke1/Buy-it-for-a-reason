@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buying<span>.</span></a>
+        </div>
+    </header>
+
+    <div class="container thank-you-box animate">
+        <div class="check-icon">✓</div>
+        <h1>Order Confirmed!</h1>
+        <p style="margin: 20px 0; color: #555;">
+            Thank you for buying for a reason. Your order #8842 has been received and is being processed.
+        </p>
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+
+    <script>
+        localStorage.removeItem('cart');
+    </script>
+
+</body>
+</html>
