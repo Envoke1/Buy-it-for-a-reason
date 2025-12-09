@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buying for a Reason</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Buying<span>.</span></a>
+            <nav class="nav-links">
+                <a href="shop.html">Shop All</a>
+                <a href="shop.html">Shoes</a>
+                <a href="shop.html">Bags</a>
+                <a href="shop.html">Watches</a>
+            </nav>
+            <a href="cart.html">Bag <span id="cart-count" class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <section class="hero animate">
+        <div class="container">
+            <h1>BUYING FOR<br>A REASON.</h1>
+            <p style="margin-bottom: 30px;">Premium goods. Ethical sourcing.</p>
+            <a href="shop.html" class="btn">Shop Collection</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom:30px;">Trending Now</h2>
+        <div class="product-grid">
+             <div class="product-card animate" onclick="window.location.href='product.html?id=1'">
+                <div class="img-wrap"><img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+                <div class="p-info"><h4>Urban Runner</h4><span class="price">R 1200</span></div>
+             </div>
+             <div class="product-card animate" onclick="window.location.href='product.html?id=9'">
+                <div class="img-wrap"><img src="https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+                <div class="p-info"><h4>Chronograph Gold</h4><span class="price">R 3500</span></div>
+             </div>
+             <div class="product-card animate" onclick="window.location.href='product.html?id=5'">
+                <div class="img-wrap"><img src="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+                <div class="p-info"><h4>Leather Tote</h4><span class="price">R 2500</span></div>
+             </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
